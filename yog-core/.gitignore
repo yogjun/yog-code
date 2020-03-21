@@ -1,0 +1,28 @@
+*.class
+.tern-project
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Eclipse project files 
+/.settings/
+.classpath
+.project
+
+#target files
+target/
+logs/
+
+#log files
+logs/
+
+#mac file
+.DS_STORE
