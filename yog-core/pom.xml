@@ -5,7 +5,7 @@
 
     <groupId>cn.yog</groupId>
     <artifactId>yog-core</artifactId>
-    <version>${yogjun.version}</version>
+    <version>${yog.version}</version>
     <packaging>jar</packaging>
 
     <name>yog-core</name>

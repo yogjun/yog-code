@@ -1,0 +1,18 @@
+server:
+  max-http-header-size: 20480
+  port: 8081
+  servlet:
+    context-path: /chess
+  tomcat:
+    basedir: /data/tmp
+
+logging:
+  level:
+    root: info
+    cn.yog.chess: debug
+
+swagger:
+  enable: true
+  base-package: "cn.yog.chess.controller"
+  title: Jzez Web Api Document
+  description: 家装e站API在线文档

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>yog-micros</artifactId>
+        <groupId>cn.yog</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>cn.yog</groupId>
+    <artifactId>yog-chess</artifactId>
+    <version>${yog.version}</version>
+    <modules>
+        <module>yog-chess-web</module>
+        <module>yog-chess-vo</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <dependencies>
+    <dependency>
+        <groupId>cn.yog</groupId>
+        <artifactId>yog-core</artifactId>
+        <version>${yog.version}</version>
+    </dependency>
+    </dependencies>
+
+</project>
