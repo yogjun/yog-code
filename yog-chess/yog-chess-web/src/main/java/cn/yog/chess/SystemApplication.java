@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class}, scanBasePackages = "cn.yog")
+@EnableDiscoveryClient
 @EnableSwagger2
 public class SystemApplication extends SpringBootServletInitializer {
 

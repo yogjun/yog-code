@@ -1,0 +1,30 @@
+server:
+  max-http-header-size: 20480
+  port: 9001
+  servlet:
+    context-path: /chess
+  tomcat:
+    basedir: /data/tmp
+
+spring:
+  application:
+    name: yog-chess
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 114.215.80.109:8100
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    root: info
+    cn.yog.chess: debug
+
+swagger:
+  enable: true
+  base-package: "cn.yog.chess.controller"
+  title: Yog Web Api Document
+  description: YOGJUN API在线文档
