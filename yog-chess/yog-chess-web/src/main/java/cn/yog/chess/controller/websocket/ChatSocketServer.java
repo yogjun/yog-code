@@ -5,6 +5,8 @@ import cn.yog.core.util.ResultUtil;
 import org.perf4j.aop.Profiled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.websocket.OnClose;
@@ -21,7 +23,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * @author yog
  * @date：Created in 2020/3/26 23:30
  */
-@ServerEndpoint("/chatserver")
+@ServerEndpoint("/chatserver/{shipId}")
 @Component
 @RestController
 public class ChatSocketServer {
@@ -31,10 +33,10 @@ public class ChatSocketServer {
     private static Map<String,Session> sessionPool = new HashMap<>();
 
     @OnOpen
-    public void onOpen(Session session, @PathParam(value="shopId") String shopId) {
+    public void onOpen(Session session, @PathParam(value="shipId") String shipId) {
         this.session = session;
         webSockets.add(this);
-        sessionPool.put(shopId, session);
+        sessionPool.put(shipId, session);
         System.out.println("【websocket消息】有新的连接，总数为:"+webSockets.size());
     }
 

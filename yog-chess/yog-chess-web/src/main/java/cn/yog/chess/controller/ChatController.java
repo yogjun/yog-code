@@ -24,7 +24,7 @@ public class ChatController extends BaseController {
 
     @GetMapping("/getInfo")
     @Profiled
-    public Result imports(@PathParam(value="shopId") String shipId) throws Exception{
+    public Result imports(@PathParam(value="shipId") String shipId) throws Exception{
         for(int i=0;i<10;i++){
             Thread.sleep(500);
             chatSocketServer.sendTextMessage(shipId,"");
