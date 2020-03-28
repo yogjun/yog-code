@@ -1,5 +1,6 @@
-package cn.yog.chess.controller;
+package cn.yog.chess.controller.base;
 
+import cn.yog.chess.controller.demo.WebSocketServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ui.ModelMap;
@@ -11,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public abstract class BaseController {
 
-    Logger log = LoggerFactory.getLogger(this.getClass());
-    
+    protected final static Logger logger = LoggerFactory.getLogger(WebSocketServer.class.getName());
+
     protected ModelMap            model;
     @Resource
     protected HttpServletRequest  request;

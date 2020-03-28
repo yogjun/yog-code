@@ -1,11 +1,9 @@
-package cn.yog.chess.controller;
+package cn.yog.chess.controller.chat;
 
-import cn.yog.chess.controller.BaseController;
-import cn.yog.chess.controller.websocket.ChatSocketServer;
+import cn.yog.chess.controller.base.BaseController;
 import cn.yog.core.bean.Result;
 import cn.yog.core.util.ResultUtil;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.perf4j.aop.Profiled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

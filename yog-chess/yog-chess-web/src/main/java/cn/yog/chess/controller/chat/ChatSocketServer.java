@@ -1,14 +1,7 @@
-package cn.yog.chess.controller.websocket;
+package cn.yog.chess.controller.chat;
 
-import cn.yog.core.bean.Result;
-import cn.yog.core.util.ResultUtil;
-import org.perf4j.aop.Profiled;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -28,7 +21,6 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @RestController
 public class ChatSocketServer {
     private Session session;
-
     private static CopyOnWriteArraySet<ChatSocketServer> webSockets =new CopyOnWriteArraySet<>();
     private static Map<String,Session> sessionPool = new HashMap<>();
 

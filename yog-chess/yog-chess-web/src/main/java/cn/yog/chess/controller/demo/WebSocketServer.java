@@ -1,4 +1,4 @@
-package cn.yog.chess.controller.websocket;
+package cn.yog.chess.controller.demo;
 
 import cn.yog.core.util.LogUtil;
 import com.alibaba.fastjson.JSON;
