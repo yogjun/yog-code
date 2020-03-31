@@ -16,10 +16,13 @@ export default {
       wins: [], // 赢法数组
       myWin: [], // 我方赢法的统计数组
       computerWin: [], // 计算机赢法的统计数组
-      over: false
+      over: false,
+      colorb: ['#0a0a0a', '#636766'],
+      colorw: ['#d1d1d1', '#f9f9f9']
     }
   },
   mounted () {
+    console.log(123)
     setTimeout(_ => {
       this.init()
     })
@@ -126,11 +129,11 @@ export default {
       context.closePath()
       const gradient = context.createRadialGradient(15 + x * 30 + 2, 15 + y * 30 - 2, 13, 15 + x * 30 + 2, 15 + y * 30 - 2, 0)
       if (me) {
-        gradient.addColorStop(0, '#0a0a0a')
-        gradient.addColorStop(1, '#636766')
+        gradient.addColorStop(0, this.colorb[0])
+        gradient.addColorStop(1, this.colorb[1])
       } else {
-        gradient.addColorStop(0, '#d1d1d1')
-        gradient.addColorStop(1, '#f9f9f9')
+        gradient.addColorStop(0, this.colorw[0])
+        gradient.addColorStop(1, this.colorw[1])
       }
       context.fillStyle = gradient
       context.fill()

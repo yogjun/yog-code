@@ -11,6 +11,14 @@
           Simple Chess
         </a>
       </li>
+      <li>
+        <a
+          href="http://localhost:9501/#/Chess"
+          target="_blank"
+        >
+          Chess
+        </a>
+      </li>
     </ul>
   </div>
 </template>

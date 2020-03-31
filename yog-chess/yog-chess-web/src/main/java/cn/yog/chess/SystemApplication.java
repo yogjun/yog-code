@@ -13,13 +13,18 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import tk.mybatis.spring.annotation.MapperScan;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class}, scanBasePackages = "cn.yog")
 @EnableDiscoveryClient
 @EnableSwagger2
+@EnableTransactionManagement
+@MapperScan(basePackages = "cn.yog.chess.mapper")
 public class SystemApplication extends SpringBootServletInitializer {
 
     @Bean

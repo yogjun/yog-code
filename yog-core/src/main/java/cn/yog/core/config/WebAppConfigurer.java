@@ -10,10 +10,16 @@ public class WebAppConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//		        //.allowedOrigins("http://192.168.89.89")
+//                .allowedMethods("GET", "POST","DELETE","PUT")
+//                .allowCredentials(true).maxAge(3600);
+
         registry.addMapping("/**")
-		        //.allowedOrigins("http://192.168.89.89")
-                .allowedMethods("GET", "POST","DELETE","PUT")
-                .allowCredentials(false).maxAge(3600);
+                .allowedOrigins("*")
+                .allowedMethods("GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "TRACE")
+                .allowCredentials(true);
+
     }
 }
 

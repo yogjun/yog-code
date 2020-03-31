@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public abstract class BaseController {
 
-    protected final static Logger logger = LoggerFactory.getLogger(WebSocketServer.class.getName());
+    protected final static Logger logger = LoggerFactory.getLogger(BaseController.class.getName());
 
     protected ModelMap            model;
     @Resource

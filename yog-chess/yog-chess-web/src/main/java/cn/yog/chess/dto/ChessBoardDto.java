@@ -8,7 +8,14 @@ import lombok.Data;
  */
 @Data
 public class ChessBoardDto {
+    private Integer totalWith = 450;
+    private Integer totalHeight = 450;
+
     private Integer widthLine = 15;
-    private Integer heightLine = 15;
+    private Integer heightLIne = 15;
+
+    private Integer length = 30;
+
+
 
 }
