@@ -9,11 +9,11 @@
     </parent>
 
     <groupId>cn.yog</groupId>
-    <artifactId>yog-chess</artifactId>
+    <artifactId>yog-unlimited</artifactId>
     <version>${yog.version}</version>
     <modules>
-        <module>yog-chess-web</module>
-        <module>yog-chess-vo</module>
+        <module>yog-unlimited-web</module>
+        <module>yog-unlimited-vo</module>
     </modules>
     <packaging>pom</packaging>
 
