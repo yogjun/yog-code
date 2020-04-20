@@ -16,12 +16,9 @@ public class ParentFrame extends JFrame {
     private int width = 60;
     private int heigh = 60;
     private int bornChance = 10;
-    public ParentFrame(int width,int heigh,int bornChance) {
-        this.width=width;
-        this.heigh=heigh;
-        this.bornChance=bornChance;
-        con();
-    }
+    private int size = width*heigh;
+    private boolean[][] life = new boolean[width][heigh];
+    private JLabel[] label = new JLabel[size];
     public ParentFrame() {
         con();
     }
@@ -33,7 +30,6 @@ public class ParentFrame extends JFrame {
             colorJLabel();
         }
     }
-
 
     private void con(){
         initLife();
@@ -50,25 +46,6 @@ public class ParentFrame extends JFrame {
         this.setLocation(200, 200);
         this.setVisible(true);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    private int size = width*heigh;
-    private boolean[][] life = new boolean[width][heigh];
-    private JLabel[] label = new JLabel[size];
 
     //设置指定格子颜色
     private void setColor(int labelId , boolean exist){
@@ -108,17 +85,31 @@ public class ParentFrame extends JFrame {
     }
 
     private void generation(){
+        boolean[][] tmp = new boolean[life.length][life[0].length];
         for (int i = 0; i < heigh; i++) {
             for (int j = 0; j < width; j++) {
-                    int sum = sumLifeAround(i,j);
-                    if(sum==3){
-                        life[i][j] = true;
-                    }else if(sum==2){
-                    }else {
-                        life[i][j] = false;
-                    }
+                int sum = sumLifeAround(i,j);
+                if(sum==3){
+                    tmp[i][j] = true;
+                }else if(sum==2){
+                    tmp[i][j] = life[i][j];
+                }else {
+                    tmp[i][j] = false;
+                }
             }
         }
+        life = tmp;
+//        for (int i = 0; i < heigh; i++) {
+//            for (int j = 0; j < width; j++) {
+//                    int sum = sumLifeAround(i,j);
+//                    if(sum==3){
+//                        life[i][j] = true;
+//                    }else if(sum==2){
+//                    }else {
+//                        life[i][j] = false;
+//                    }
+//            }
+//        }
     }
 
     private int sumLifeAround(int x,int y){

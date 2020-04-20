@@ -1,6 +1,6 @@
 package main.java.code;
 
-import main.java.panel.FailParentFrame;
+import main.java.panel.MaichongParentFrame;
 import main.java.panel.ParentFrame;
 
 /**
@@ -10,8 +10,8 @@ import main.java.panel.ParentFrame;
 public class Test {
     public static void main(String[] args) throws InterruptedException {
         // 创建实例
+//        MaichongParentFrame de = new MaichongParentFrame();
         ParentFrame de = new ParentFrame();
-//        ParentFrame de = new ParentFrame(60,60,15);
         de.nextGeneration();
     }
 }
