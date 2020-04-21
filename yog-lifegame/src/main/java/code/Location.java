@@ -1,4 +1,4 @@
-package main.java.panel;
+package main.java.code;
 
 /**
  * @author

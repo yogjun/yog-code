@@ -1,9 +1,7 @@
-package main.java.panel;
+package main.java.lifegame;
 
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,9 +11,9 @@ import javax.swing.JLabel;
  * @date 2020/4/20
  */
 public class ParentFrame extends JFrame {
-    private int width = 60;
-    private int heigh = 60;
-    private int bornChance = 10;
+    private int width = 180;
+    private int heigh = 180;
+    private int bornChance = 2;
     private int size = width*heigh;
     private boolean[][] life = new boolean[width][heigh];
     private JLabel[] label = new JLabel[size];
@@ -24,7 +22,7 @@ public class ParentFrame extends JFrame {
     }
     public void nextGeneration() throws InterruptedException {
         while(true){
-            Thread.sleep(200);
+            Thread.sleep(50);
             //计算隔代生存数
             generation();
             colorJLabel();
@@ -43,7 +41,7 @@ public class ParentFrame extends JFrame {
         this.setTitle("生命游戏");
         this.setSize(300, 300);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLocation(200, 200);
+//        this.setLocation(200, 200);
         this.setVisible(true);
     }
 

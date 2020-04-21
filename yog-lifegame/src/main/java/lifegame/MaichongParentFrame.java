@@ -1,8 +1,7 @@
-package main.java.panel;
+package main.java.lifegame;
 
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
