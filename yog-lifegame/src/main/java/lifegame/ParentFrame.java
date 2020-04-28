@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 public class ParentFrame extends JFrame {
     private int width = 180;
     private int heigh = 180;
-    private int bornChance = 2;
+    private int bornChance = 10;
     private int size = width*heigh;
     private boolean[][] life = new boolean[width][heigh];
     private JLabel[] label = new JLabel[size];
@@ -22,7 +22,7 @@ public class ParentFrame extends JFrame {
     }
     public void nextGeneration() throws InterruptedException {
         while(true){
-            Thread.sleep(50);
+            Thread.sleep(1000);
             //计算隔代生存数
             generation();
             colorJLabel();
