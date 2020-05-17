@@ -1,8 +1,6 @@
 package cn.yog.chess.entity.user;
 
 import lombok.Data;
-
-import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "user")

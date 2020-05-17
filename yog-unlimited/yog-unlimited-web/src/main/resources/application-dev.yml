@@ -5,7 +5,10 @@ server:
     context-path: /unlimited
   tomcat:
     basedir: /data/tmp
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://114.215.80.109:8761/eureka/
 spring:
   application:
     name: yog-unlimited
@@ -43,9 +46,9 @@ spring:
   redis:
     cluster:
       nodes:
-        - 114.215.80.109:6379
-        - 114.215.80.109:6379
-        - 114.215.80.109:6379
+        - 127.0.0.1:6379
+        - 127.0.0.1:6379
+        - 127.0.0.1:6379
       so-timeout: 1500
       connection-timeout: 800
       max-attempts: 3
@@ -72,10 +75,6 @@ spring:
     ConnectTimeout: 2000
     MaxAutoRetries: 0
     MaxAutoRetriesNextServer: 1
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 114.215.80.109:8100
 
 management:
   endpoints:
