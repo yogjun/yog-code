@@ -25,3 +25,6 @@ target/
 .DS_STORE
 
 logs/
+*.yml
+
+application.yml
