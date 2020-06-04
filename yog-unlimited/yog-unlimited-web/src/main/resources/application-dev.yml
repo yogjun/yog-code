@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://114.215.80.109:3306/unlimited?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
     username: root
-    password: root
+    password: YOGjun23
     druid:
       initial-size: 2
       max-active: 30
